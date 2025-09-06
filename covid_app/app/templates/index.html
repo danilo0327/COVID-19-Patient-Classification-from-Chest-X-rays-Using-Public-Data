@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COVID-19 Radiography Classifier</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white flex flex-col items-center p-6">
+
+  <!-- Header -->
+  <div class="bg-blue-50 px-6 py-4 rounded-xl w-full max-w-4xl mb-6">
+    <h1 class="text-2xl font-semibold text-gray-800">
+      COVID-19 Radiography Classifier
+    </h1>
+  </div>
+
+  <!-- Upload + User Details -->
+  <form method="post" action="/api/v1/predict" enctype="multipart/form-data" 
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+    
+    <!-- Upload box -->
+    <div class="border-2 border-dashed border-gray-300 rounded-xl p-6 flex flex-col items-center justify-center">
+      <label class="block text-gray-700 mb-2 font-semibold">Upload your lung radiography</label>
+      <input type="file" name="file" accept=".jpg,.png" class="mb-4">
+      <div class="flex gap-4">
+        <button type="reset" class="px-4 py-2 border rounded-lg">Cancel</button>
+        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-lg">Continue</button>
+      </div>
+    </div>
+
+    <!-- User details -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">User Details</h2>
+      <input type="text" name="name" placeholder="Name" class="w-full border rounded-lg p-2 mb-4">
+      <input type="email" name="email" placeholder="Email" class="w-full border rounded-lg p-2">
+    </div>
+  </form>
+
+  <!-- Diagnosis Result -->
+  {% if result %}
+  <div class="mt-12 w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <!-- Example X-ray preview -->
+    <div>
+      <h2 class="text-xl font-semibold mb-4">Diagnosis</h2>
+      <img src="https://via.placeholder.com/300x300" alt="X-ray" class="rounded-xl">
+    </div>
+
+    <!-- Results -->
+    <div>
+      <p class="text-xl font-semibold mb-4 text-gray-800">COVID-19 {{ result.covid }}%</p>
+      <p class="mb-2">Pneumonia {{ result.pneumonia }}%</p>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-blue-600 h-2 rounded-full" style="width: {{ result.pneumonia }}%"></div>
+      </div>
+      <p class="mb-2">Normal {{ result.normal }}%</p>
+      <div class="w-full bg-gray-200 rounded-full h-2">
+        <div class="bg-blue-400 h-2 rounded-full" style="width: {{ result.normal }}%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="mt-8 flex justify-center gap-6">
+    <button class="px-6 py-3 border rounded-lg">Download Report</button>
+    <a href="/" class="px-6 py-3 bg-blue-900 text-white rounded-lg">New Analysis</a>
+  </div>
+  {% endif %}
+
+</body>
+</html>
