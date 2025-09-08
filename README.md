@@ -40,10 +40,10 @@ The workflow integrates **CNN models (Keras & PyTorch)**, **MLflow experiment tr
 ---
 
 ##  Models
-- **Simple CNN (Keras)** — Baseline architecture.  
-- **Simplified CNN (Keras)** — Lightweight comparison.  
-- **ResNet50 (Transfer Learning, Keras Applications)** — Pretrained on ImageNet.  
-- **ResNet18 (PyTorch)** — Best performance, ~80% accuracy.  
+-  CNN Small (Keras) — Baseline architecture.  
+- Simplified CNN (Keras) — Lightweight comparison.  
+- ResNet50 and efficientnet_b0. (Transfer Learning, Keras Applications) — Pretrained on ImageNet.  
+- ResNet18 (PyTorch) — Best performance, ~80% accuracy.  
 
 Trained weights and artifacts are stored in `models/`.  
 Training details are documented in `notebooks/`.  
