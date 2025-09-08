@@ -9,15 +9,37 @@ The workflow integrates **CNN models (Keras & PyTorch)**, **MLflow experiment tr
 ---
 
 ##  Repository Structure
-├── covid_app/ # Web dashboard 
-├── data/ # Raw data, structured CSVs, DVC tracking
-├── models/ # Trained models and class mappings
-├── notebooks/ # Training and experiment notebooks
-└── scripts/ # Utility scripts (data prep, etc.)
+
+```bash
+.
+├── covid_app/           # Web dashboard (Flask + Jinja2)
+│   ├── app/             # Backend code, templates, static files
+│   ├── requirements.txt # Dashboard dependencies
+│   ├── tox.ini          # Testing configuration
+│   └── ...
+│
+├── data/                # Raw data, structured CSVs, DVC tracking
+│   ├── raw/             
+│   ├── dataframe/
+│   └── xray_images.csv.dvc
+│
+├── models/              # Trained models and class mappings
+│   ├── classes_resnet18.json
+│   └── covid19-detection-resnet18.zip
+│
+├── notebooks/           # Training and experiment notebooks
+│   ├── Chest_Xray_4Class_Colab.ipynb
+│   ├── Chest_Xray_4Class_Colab_MLflow(v2).ipynb
+│   ├── EDA.ipynb
+│   └── models_test.ipynb
+│
+└── scripts/             # Utility scripts
+    └── create_csv.py
+
 
 ---
 
-## ⚙️ Models
+##  Models
 - **Simple CNN (Keras)** — Baseline architecture.  
 - **Simplified CNN (Keras)** — Lightweight comparison.  
 - **ResNet50 (Transfer Learning, Keras Applications)** — Pretrained on ImageNet.  
