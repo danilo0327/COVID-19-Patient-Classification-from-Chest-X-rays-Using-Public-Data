@@ -1,0 +1,662 @@
+[
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-10.png",
+    "true": "Normal",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.0005753934965468943,
+      "Lung_Opacity": 0.03412076085805893,
+      "Normal": 0.9646846055984497,
+      "Viral Pneumonia": 0.0006192617584019899
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-10058.png",
+    "true": "Normal",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.0043985783122479916,
+      "Lung_Opacity": 0.037861790508031845,
+      "Normal": 0.9494656920433044,
+      "Viral Pneumonia": 0.008273957297205925
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1055.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.9988425374031067,
+      "Lung_Opacity": 0.000677160860504955,
+      "Normal": 0.00015190882550086826,
+      "Viral Pneumonia": 0.00032840765197761357
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-105.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.49474820494651794,
+      "Lung_Opacity": 0.44985365867614746,
+      "Normal": 0.0020113643258810043,
+      "Viral Pneumonia": 0.0533868744969368
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1043.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.00018837809329852462,
+      "Lung_Opacity": 0.00012724159751087427,
+      "Normal": 0.0007173658814281225,
+      "Viral Pneumonia": 0.9989670515060425
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-1007.png",
+    "true": "Normal",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.0015616477467119694,
+      "Lung_Opacity": 0.0033591785468161106,
+      "Normal": 0.9701223373413086,
+      "Viral Pneumonia": 0.024956785142421722
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1050.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.006966583430767059,
+      "Lung_Opacity": 0.0014850745210424066,
+      "Normal": 0.006644556764513254,
+      "Viral Pneumonia": 0.9849036931991577
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1063.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.09194187074899673,
+      "Lung_Opacity": 0.9024046063423157,
+      "Normal": 0.0030892358627170324,
+      "Viral Pneumonia": 0.002564238617196679
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-100.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.9243643879890442,
+      "Lung_Opacity": 0.030184360221028328,
+      "Normal": 0.0419151671230793,
+      "Viral Pneumonia": 0.003536073025316
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1066.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.0015091028762981296,
+      "Lung_Opacity": 0.00030153951956890523,
+      "Normal": 0.013444256037473679,
+      "Viral Pneumonia": 0.9847450852394104
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-10006.png",
+    "true": "Normal",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.14926739037036896,
+      "Lung_Opacity": 0.2961600422859192,
+      "Normal": 0.5520834922790527,
+      "Viral Pneumonia": 0.0024890354834496975
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-10062.png",
+    "true": "Normal",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.0005876860814169049,
+      "Lung_Opacity": 0.013719724491238594,
+      "Normal": 0.9839727878570557,
+      "Viral Pneumonia": 0.0017198167042806745
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-10047.png",
+    "true": "Normal",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.9601490497589111,
+      "Lung_Opacity": 0.014509020373225212,
+      "Normal": 0.006194445304572582,
+      "Viral Pneumonia": 0.019147546961903572
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1075.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.00035601749550551176,
+      "Lung_Opacity": 0.00012090281234122813,
+      "Normal": 0.0007072644657455385,
+      "Viral Pneumonia": 0.9988158941268921
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1056.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.44050276279449463,
+      "Lung_Opacity": 0.5269676446914673,
+      "Normal": 0.00704189483076334,
+      "Viral Pneumonia": 0.025487687438726425
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1062.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.12331069260835648,
+      "Lung_Opacity": 0.8687754273414612,
+      "Normal": 0.0034505166113376617,
+      "Viral Pneumonia": 0.0044633615761995316
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1003.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.003133094171062112,
+      "Lung_Opacity": 0.9959959983825684,
+      "Normal": 0.00012688276183325797,
+      "Viral Pneumonia": 0.0007439512992277741
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1004.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.011486946605145931,
+      "Lung_Opacity": 0.9235339760780334,
+      "Normal": 0.05341445654630661,
+      "Viral Pneumonia": 0.011564554646611214
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1085.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.012064526788890362,
+      "Lung_Opacity": 0.9862334728240967,
+      "Normal": 0.0007338887662626803,
+      "Viral Pneumonia": 0.000968030421063304
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1065.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.8822498321533203,
+      "Lung_Opacity": 0.06844210624694824,
+      "Normal": 0.0003831579815596342,
+      "Viral Pneumonia": 0.04892493411898613
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1014.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.0016243079444393516,
+      "Lung_Opacity": 0.00019156474445480853,
+      "Normal": 0.0006074205157347023,
+      "Viral Pneumonia": 0.9975766539573669
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1046.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.00067313970066607,
+      "Lung_Opacity": 8.940439147409052e-05,
+      "Normal": 0.0005687114899046719,
+      "Viral Pneumonia": 0.9986687898635864
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1083.png",
+    "true": "COVID",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.005090441554784775,
+      "Lung_Opacity": 0.0074622659012675285,
+      "Normal": 0.9853225946426392,
+      "Viral Pneumonia": 0.0021246958058327436
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1031.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.9973729848861694,
+      "Lung_Opacity": 0.002142746467143297,
+      "Normal": 4.590175376506522e-05,
+      "Viral Pneumonia": 0.0004383283667266369
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1074.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.9980073571205139,
+      "Lung_Opacity": 0.00151962717063725,
+      "Normal": 6.320368265733123e-05,
+      "Viral Pneumonia": 0.000409814587328583
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1004.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.36146920919418335,
+      "Lung_Opacity": 0.002446328056976199,
+      "Normal": 0.015000230632722378,
+      "Viral Pneumonia": 0.6210842132568359
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1010.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.16082902252674103,
+      "Lung_Opacity": 0.8352031111717224,
+      "Normal": 0.0012460111174732447,
+      "Viral Pneumonia": 0.0027218551840633154
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1083.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.04059111699461937,
+      "Lung_Opacity": 0.8866910338401794,
+      "Normal": 0.03328043222427368,
+      "Viral Pneumonia": 0.03943744674324989
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1030.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.3309219479560852,
+      "Lung_Opacity": 0.5753949880599976,
+      "Normal": 0.0010581266833469272,
+      "Viral Pneumonia": 0.09262489527463913
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1029.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.0003299426462035626,
+      "Lung_Opacity": 7.241819548653439e-05,
+      "Normal": 0.000780105940066278,
+      "Viral Pneumonia": 0.998817503452301
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-1.png",
+    "true": "Normal",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.000543444009963423,
+      "Lung_Opacity": 0.010348618030548096,
+      "Normal": 0.9861888289451599,
+      "Viral Pneumonia": 0.0029190215282142162
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-10018.png",
+    "true": "Normal",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.04988909140229225,
+      "Lung_Opacity": 0.03181304782629013,
+      "Normal": 0.8634987473487854,
+      "Viral Pneumonia": 0.05479913577437401
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-10046.png",
+    "true": "Normal",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.7063692212104797,
+      "Lung_Opacity": 0.027954140678048134,
+      "Normal": 0.2535122334957123,
+      "Viral Pneumonia": 0.012164382264018059
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-1006.png",
+    "true": "Normal",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.05369230732321739,
+      "Lung_Opacity": 0.004761592019349337,
+      "Normal": 0.41963881254196167,
+      "Viral Pneumonia": 0.5219073295593262
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1019.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.9897283315658569,
+      "Lung_Opacity": 0.0012649152195081115,
+      "Normal": 0.006872018799185753,
+      "Viral Pneumonia": 0.0021347091533243656
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1018.png",
+    "true": "Lung_Opacity",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.8072364330291748,
+      "Lung_Opacity": 0.1715134084224701,
+      "Normal": 0.005066295154392719,
+      "Viral Pneumonia": 0.016183804720640182
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1031.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.0002990821667481214,
+      "Lung_Opacity": 5.956374297966249e-05,
+      "Normal": 0.0002193861291743815,
+      "Viral Pneumonia": 0.9994219541549683
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-10029.png",
+    "true": "Normal",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.03553709387779236,
+      "Lung_Opacity": 0.2631983160972595,
+      "Normal": 0.6936169862747192,
+      "Viral Pneumonia": 0.007647543679922819
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1062.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.9972965121269226,
+      "Lung_Opacity": 0.0020485229324549437,
+      "Normal": 5.270572728477418e-06,
+      "Viral Pneumonia": 0.0006497033755294979
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1055.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.0033173784613609314,
+      "Lung_Opacity": 0.0007479035994037986,
+      "Normal": 0.0025531083811074495,
+      "Viral Pneumonia": 0.9933816194534302
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1052.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.958186686038971,
+      "Lung_Opacity": 0.03819919750094414,
+      "Normal": 0.0006026370101608336,
+      "Viral Pneumonia": 0.0030114457476884127
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1052.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.000950979592744261,
+      "Lung_Opacity": 0.0003069831873290241,
+      "Normal": 0.000691517605446279,
+      "Viral Pneumonia": 0.9980505704879761
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1037.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.018846549093723297,
+      "Lung_Opacity": 0.00027367539587430656,
+      "Normal": 0.002290259813889861,
+      "Viral Pneumonia": 0.9785894751548767
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1045.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.9756670594215393,
+      "Lung_Opacity": 0.006746160797774792,
+      "Normal": 0.000881495070643723,
+      "Viral Pneumonia": 0.01670519821345806
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-1005.png",
+    "true": "Normal",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.014247843995690346,
+      "Lung_Opacity": 0.0023565879091620445,
+      "Normal": 0.04877813905477524,
+      "Viral Pneumonia": 0.9346175193786621
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1076.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.9921658039093018,
+      "Lung_Opacity": 0.0012253725435584784,
+      "Normal": 0.0007157320505939424,
+      "Viral Pneumonia": 0.005893118679523468
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-101.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.23326371610164642,
+      "Lung_Opacity": 0.7651656270027161,
+      "Normal": 0.00021995666611474007,
+      "Viral Pneumonia": 0.0013506760587915778
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1044.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.9892256855964661,
+      "Lung_Opacity": 0.004645631182938814,
+      "Normal": 0.003848026040941477,
+      "Viral Pneumonia": 0.002280710730701685
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-10078.png",
+    "true": "Normal",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.18673092126846313,
+      "Lung_Opacity": 0.12166598439216614,
+      "Normal": 0.6228428483009338,
+      "Viral Pneumonia": 0.06876029819250107
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-10083.png",
+    "true": "Normal",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.002964625135064125,
+      "Lung_Opacity": 0.030337311327457428,
+      "Normal": 0.9644911885261536,
+      "Viral Pneumonia": 0.0022068789694458246
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1027.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.022480498999357224,
+      "Lung_Opacity": 0.9648943543434143,
+      "Normal": 0.0038224575109779835,
+      "Viral Pneumonia": 0.008802730590105057
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1040.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.001241880003362894,
+      "Lung_Opacity": 0.0006802059942856431,
+      "Normal": 0.0007506280089728534,
+      "Viral Pneumonia": 0.9973273277282715
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1035.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.9811262488365173,
+      "Lung_Opacity": 0.014998159371316433,
+      "Normal": 0.00015296143828891218,
+      "Viral Pneumonia": 0.0037225589621812105
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1037.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.24555416405200958,
+      "Lung_Opacity": 0.6365939378738403,
+      "Normal": 0.04328716918826103,
+      "Viral Pneumonia": 0.07456474006175995
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1029.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.0020686297211796045,
+      "Lung_Opacity": 0.9969074130058289,
+      "Normal": 0.00022120328503660858,
+      "Viral Pneumonia": 0.0008027238072827458
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-106.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.00010274333180859685,
+      "Lung_Opacity": 6.22188817942515e-05,
+      "Normal": 0.00045609736116603017,
+      "Viral Pneumonia": 0.9993789196014404
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Normal/Normal-10030.png",
+    "true": "Normal",
+    "pred": "Normal",
+    "probs": {
+      "COVID": 0.00028533831937238574,
+      "Lung_Opacity": 0.026924584060907364,
+      "Normal": 0.9703019857406616,
+      "Viral Pneumonia": 0.0024880387354642153
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Viral Pneumonia/Viral Pneumonia-1019.png",
+    "true": "Viral Pneumonia",
+    "pred": "Viral Pneumonia",
+    "probs": {
+      "COVID": 0.0023111028131097555,
+      "Lung_Opacity": 0.0002974634990096092,
+      "Normal": 0.0007234711665660143,
+      "Viral Pneumonia": 0.9966679215431213
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/Lung_Opacity/Lung_Opacity-1040.png",
+    "true": "Lung_Opacity",
+    "pred": "Lung_Opacity",
+    "probs": {
+      "COVID": 0.00598392728716135,
+      "Lung_Opacity": 0.992408037185669,
+      "Normal": 0.0005635268171317875,
+      "Viral Pneumonia": 0.0010445518419146538
+    }
+  },
+  {
+    "image": "/content/drive/MyDrive/datasets/chest_xray/COVID/COVID-1087.png",
+    "true": "COVID",
+    "pred": "COVID",
+    "probs": {
+      "COVID": 0.994690477848053,
+      "Lung_Opacity": 0.0006264540716074407,
+      "Normal": 0.002048697555437684,
+      "Viral Pneumonia": 0.002634438220411539
+    }
+  }
+]

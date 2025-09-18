@@ -1,17 +1,16 @@
 from typing import Any
-
 from fastapi import APIRouter, FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
-from loguru import logger
 from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from loguru import logger
+
 from covid_app.app.api import api_router
 from covid_app.app.config import settings, setup_app_logging
-from fastapi.templating import Jinja2Templates
 
 # setup logging as early as possible
 setup_app_logging(config=settings)
-
 
 app = FastAPI(
     title=settings.PROJECT_NAME, openapi_url=f"{settings.API_V1_STR}/openapi.json"
@@ -19,19 +18,21 @@ app = FastAPI(
 
 root_router = APIRouter()
 
-#app.mount("/", StaticFiles(directory="app/static", html=True), name="static")
+# Montar /static (para servir imágenes subidas)
+app.mount("/static", StaticFiles(directory="covid_app/app/static"), name="static")
 
 templates = Jinja2Templates(directory="covid_app/app/templates")
-# Cuerpo de la respuesta en la raíz
+
+# Home
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-
+# Routers
 app.include_router(api_router, prefix=settings.API_V1_STR)
 app.include_router(root_router)
 
-# Set all CORS enabled origins
+# CORS
 if settings.BACKEND_CORS_ORIGINS:
     app.add_middleware(
         CORSMiddleware,
@@ -41,11 +42,7 @@ if settings.BACKEND_CORS_ORIGINS:
         allow_headers=["*"],
     )
 
-
 if __name__ == "__main__":
-    # Use this for debugging purposes only
     logger.warning("Running in development mode. Do not run like this in production.")
     import uvicorn
-
-    # ejecución del servidor - host para ejecutar en servidor 
     uvicorn.run(app, host="0.0.0.0", port=8001, log_level="debug")

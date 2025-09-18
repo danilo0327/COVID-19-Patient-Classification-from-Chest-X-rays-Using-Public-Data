@@ -4,8 +4,5 @@
     "Lung_Opacity",
     "Normal",
     "Viral Pneumonia"
-  ],
-  "num_train": 280,
-  "num_val": 60,
-  "num_test": 60
+  ]
 }

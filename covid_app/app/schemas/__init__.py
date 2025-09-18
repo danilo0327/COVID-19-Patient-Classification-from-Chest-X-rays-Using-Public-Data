@@ -1,2 +1,4 @@
 from .health import Health
-from .predict import PredictionResults
+from .predict import PredictionResults, PredictionPayload
+
+__all__ = ["Health", "PredictionResults", "PredictionPayload"]

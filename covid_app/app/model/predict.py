@@ -1,52 +1,67 @@
-import os
-import json
-import torch
+# covid_app/app/model/predict.py
+import os, json, torch
 import torch.nn as nn
 import torchvision.models as models
 import torchvision.transforms as transforms
 from PIL import Image
 
-# Paths
 BASE_DIR = os.path.dirname(__file__)
-MODEL_PATH = os.path.join(BASE_DIR, "model_V01.pt")
+MODEL_PATH = os.path.join(BASE_DIR, "model_V02.pt")  # <-- ajusta si tu archivo se llama distinto
 CLASSES_PATH = os.path.join(BASE_DIR, "classes.json")
+IMAGE_SIZE = 224
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# Load checkpoint
-checkpoint = torch.load(MODEL_PATH, map_location="cpu")
+checkpoint = torch.load(MODEL_PATH, map_location=DEVICE)
 
-# Load classes (from json, o directamente de checkpoint si existen)
-if "classes" in checkpoint:
-    idx_to_class = checkpoint["classes"]
-else:
+def load_classes():
+    if "classes" in checkpoint:
+        c = checkpoint["classes"]
+        if isinstance(c, dict) and "classes" in c:
+            return c["classes"]
+        return c
     with open(CLASSES_PATH, "r") as f:
-        idx_to_class = json.load(f)
+        data = json.load(f)
+    return data["classes"] if isinstance(data, dict) and "classes" in data else data
 
-# Define model (must match training)
+CLASSES = load_classes()
+
+# Modelo
 model = models.resnet18(weights=None)
 num_features = model.fc.in_features
-model.fc = nn.Linear(num_features, len(idx_to_class))
-
-# Load weights from checkpoint
+model.fc = nn.Linear(num_features, len(CLASSES))
 model.load_state_dict(checkpoint["state_dict"])
-model.eval()
+model.to(DEVICE).eval()
 
-# Image preprocessing
-transform = transforms.Compose([
-    transforms.Resize((224, 224)),
+# Transforms (rayos X: L -> 3 canales)
+TFM = transforms.Compose([
+    transforms.Grayscale(num_output_channels=3),
+    transforms.Resize(int(IMAGE_SIZE * 1.14)),
+    transforms.CenterCrop(IMAGE_SIZE),
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                         std=[0.229, 0.224, 0.225])
+    transforms.Normalize([0.485,0.456,0.406],[0.229,0.224,0.225]),
 ])
 
-def preprocess_image(image_path: str):
-    image = Image.open(image_path).convert("RGB")
-    return transform(image).unsqueeze(0)
+def _preprocess(image_path: str):
+    img = Image.open(image_path).convert("L")
+    return TFM(img).unsqueeze(0).to(DEVICE)
 
+@torch.no_grad()
+def predict_with_probs(image_path: str):
+    """
+    Return:
+      pred_label: str
+      probs_dict: Dict[str, float]  # 0-1 por clase
+    """
+    x = _preprocess(image_path)
+    logits = model(x)
+    probs = torch.softmax(logits, dim=1).squeeze(0).cpu().numpy()
+    pred_idx = int(probs.argmax())
+    pred_label = CLASSES[pred_idx]
+    probs_dict = {CLASSES[i]: float(probs[i]) for i in range(len(CLASSES))}
+    return pred_label, probs_dict
+
+# compat: solo clase
 def make_prediction(image_path: str) -> str:
-    tensor = preprocess_image(image_path)
-    with torch.no_grad():
-        outputs = model(tensor)
-        _, predicted = outputs.max(1)
-        class_idx = predicted.item()   # 👈 ya como entero
-    return idx_to_class[class_idx]
+    pred, _ = predict_with_probs(image_path)
+    return pred
 

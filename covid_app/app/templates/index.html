@@ -16,13 +16,13 @@
   </div>
 
   <!-- Upload + User Details -->
-  <form method="post" action="/api/v1/predict" enctype="multipart/form-data" 
+  <form method="post" action="/api/v1/predict_html" enctype="multipart/form-data" 
         class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
     
     <!-- Upload box -->
     <div class="border-2 border-dashed border-gray-300 rounded-xl p-6 flex flex-col items-center justify-center">
       <label class="block text-gray-700 mb-2 font-semibold">Upload your lung radiography</label>
-      <input type="file" name="file" accept=".jpg,.png" class="mb-4">
+      <input type="file" name="file" accept=".jpg,.png" class="mb-4" required>
       <div class="flex gap-4">
         <button type="reset" class="px-4 py-2 border rounded-lg">Cancel</button>
         <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-lg">Continue</button>
@@ -39,33 +39,37 @@
 
   <!-- Diagnosis Result -->
   {% if result %}
-  <div class="mt-12 w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-    <!-- Example X-ray preview -->
+  <div class="mt-12 w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <!-- X-ray preview -->
     <div>
       <h2 class="text-xl font-semibold mb-4">Diagnosis</h2>
-      <img src="https://via.placeholder.com/300x300" alt="X-ray" class="rounded-xl">
+      <img src="{{ result.image_url }}" alt="X-ray" class="rounded-xl border max-h-[420px]">
     </div>
 
-    <!-- Results -->
-    <div>
-      <p class="text-xl font-semibold mb-4 text-gray-800">COVID-19 {{ result.covid }}%</p>
-      <p class="mb-2">Pneumonia {{ result.pneumonia }}%</p>
-      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-        <div class="bg-blue-600 h-2 rounded-full" style="width: {{ result.pneumonia }}%"></div>
+    <!-- Report -->
+    <div class="space-y-4">
+      <div class="text-xl font-semibold text-gray-800">
+        Predicted class: <span class="text-blue-700">{{ result.pred }}</span>
       </div>
-      <p class="mb-2">Normal {{ result.normal }}%</p>
-      <div class="w-full bg-gray-200 rounded-full h-2">
-        <div class="bg-blue-400 h-2 rounded-full" style="width: {{ result.normal }}%"></div>
+
+      <div>
+        {% for cls, p in result.probs | dictsort(by='value', reverse=True) %}
+          <p class="mb-1">{{ cls }} {{ p }}%</p>
+          <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+            <div class="bg-blue-600 h-2 rounded-full" style="width: {{ p }}%"></div>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>
 
   <!-- Buttons -->
   <div class="mt-8 flex justify-center gap-6">
-    <button class="px-6 py-3 border rounded-lg">Download Report</button>
+    <button onclick="window.print()" class="px-6 py-3 border rounded-lg">Download Report (PDF)</button>
     <a href="/" class="px-6 py-3 bg-blue-900 text-white rounded-lg">New Analysis</a>
   </div>
   {% endif %}
 
 </body>
 </html>
+
