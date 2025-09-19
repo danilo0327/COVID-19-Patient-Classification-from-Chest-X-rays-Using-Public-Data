@@ -1,0 +1,27 @@
+version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - echo "Backend build completed"
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "Installing dependencies"
+    build:
+      commands:
+        - echo "Building Docker image"
+        - docker build -t covid-app .
+        - echo "Build completed"
+    postBuild:
+      commands:
+        - echo "Post build completed"
+  artifacts:
+    baseDirectory: .
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - .venv/**/*
+      - __pycache__/**/*
