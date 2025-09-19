@@ -8,11 +8,13 @@ frontend:
   phases:
     preBuild:
       commands:
-        - echo "Installing dependencies"
+        - echo "Installing Python dependencies"
+        - python -m pip install --upgrade pip
+        - pip install -r covid_app/requirements.txt
+        - pip install gunicorn
     build:
       commands:
-        - echo "Building Docker image"
-        - docker build -t covid-app .
+        - echo "Building the application"
         - echo "Build completed"
     postBuild:
       commands:
