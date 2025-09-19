@@ -1,0 +1,14 @@
+FROM python:3.10
+
+WORKDIR /app
+COPY requirements.txt /app/
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+
+# (Opcional) copia e instala el wheel si existe
+# COPY model-pkg/model_abandono-0.0.2-py3-none-any.whl /app/model-pkg/
+# RUN pip install --no-cache-dir /app/model-pkg/model_abandono-0.0.2-py3-none-any.whl
+
+COPY . /app
+
+EXPOSE 3000
+CMD ["uvicorn", "covid_app.app.main:app", "--host", "0.0.0.0", "--port", "3000"]
