@@ -3,18 +3,22 @@ backend:
   phases:
     build:
       commands:
+        - echo "Installing Python dependencies"
+        - python -m pip install --upgrade pip
+        - pip install -r covid_app/requirements.txt
+        - pip install gunicorn
         - echo "Backend build completed"
 frontend:
   phases:
     preBuild:
       commands:
-        - echo "Installing Python dependencies"
+        - echo "Installing Python dependencies for frontend"
         - python -m pip install --upgrade pip
         - pip install -r covid_app/requirements.txt
         - pip install gunicorn
     build:
       commands:
-        - echo "Building the application"
+        - echo "Building FastAPI application"
         - echo "Build completed"
     postBuild:
       commands:
