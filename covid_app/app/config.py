@@ -26,8 +26,8 @@ class Settings(BaseSettings):
         "https://localhost:3000",  # type: ignore
         "https://localhost:8000",  # type: ignore
         "https://localhost:8001",  # type: ignore
-        "https://*.amplifyapp.com",  # type: ignore
-        "https://*.amazonaws.com",  # type: ignore
+        "https://amplifyapp.com",  # type: ignore
+        "https://amazonaws.com",  # type: ignore
     ]
 
     PROJECT_NAME: str = "COVID-19 Chest X-ray Classification API"
